@@ -7,5 +7,4 @@ provided by the [RailsApps Project](http://railsapps.github.io/).
 It is using Devise and Pundit gems for authentication and authorization. Project can be used as a seed for other rails projects. 
 
 Pending changes:
-Add rspec to unit testing
-Improve Documentation
+Add rspec to unit testing and improve documentation
