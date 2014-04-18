@@ -18,8 +18,6 @@ gem 'thin'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :mri_21, :rbx]
-  gem 'guard-bundler'
-  gem 'guard-rails'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false
@@ -30,6 +28,8 @@ end
 group :development, :test do
   gem 'minitest'
   gem 'rspec-rails', '2.13.1'
+  gem 'guard-bundler'
+  gem 'guard-rails'
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
