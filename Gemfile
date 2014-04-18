@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'
 gem 'thin'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :mri_21, :rbx]
@@ -24,4 +25,20 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+end
+
+group :development, :test do
+  gem 'minitest'
+  gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.5.1'
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.2.1'
+  gem 'growl', '1.0.3'
+  gem 'factory_girl_rails', '4.2.0'
 end
