@@ -10,5 +10,6 @@ Make sure you edit the secrets.yml file to make it use your default user and not
 
 git update-index --assume-unchanged path/to/file.txt
 
-Pending changes:
-Improve documentation
+you can add the file to .gitignore instead if you like
+
+After you clone do not forget to rename places where RailsSeed is used - use your own application name - the most important ones are application.rb and routes.rb. Change the secrets.yml as well. For secret token use rake secret command to generate one. After that is completed run db:migrate and db:seed to migrate the db and add the admin user.
