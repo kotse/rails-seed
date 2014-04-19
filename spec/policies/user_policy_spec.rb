@@ -13,7 +13,7 @@ describe UserPolicy do
     it { should_not permit(:destroy) }
   end
 
-  context "for a n admin user" do
+  context "for an admin user" do
     let(:user_loggedin) { FactoryGirl.create(:admin) }
 
     it { should permit(:index)  }

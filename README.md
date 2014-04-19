@@ -11,4 +11,4 @@ Make sure you edit the secrets.yml file to make it use your default user and not
 git update-index --assume-unchanged path/to/file.txt
 
 Pending changes:
-Add rspec to unit testing and improve documentation
+Improve documentation
