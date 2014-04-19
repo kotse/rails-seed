@@ -6,10 +6,14 @@ provided by the [RailsApps Project](http://railsapps.github.io/).
 
 It is using Devise and Pundit gems for authentication and authorization. Project can be used as a seed for other rails projects. 
 
-Make sure you edit the secrets.yml file to make it use your default user and not the default one. Make sure you do not add secrets.yml file to production! One of the ways to make sure you never commit your sensitive data (but keep default secrets.yml in repo) is to use the assume-unchanged feature of git:
+After you clone:
+
+1) Edit config/secrets.yml, make it use your user instead of default one. For secret token generation use rake secret.
+
+2) Make sure you do not add secrets.yml file to production or commit any sensitive information in a public repository. Add it to .gitignore or use assume-unchanged: 
 
 git update-index --assume-unchanged path/to/file.txt
 
-you can add the file to .gitignore instead if you like
+3) Rename places where RailsSeed is used. Use your own application name - the most important ones are application.rb and routes.rb. Title in application.html.erb is another one. If you just copy the project folder from your local hard drive be careful with git configuration as well.
 
-After you clone do not forget to rename places where RailsSeed is used - use your own application name - the most important ones are application.rb and routes.rb. Change the secrets.yml as well. For secret token use rake secret command to generate one. After that is completed run db:migrate and db:seed to migrate the db and add the admin user.
+4) run db:migrate and db:seed to migrate the db and add the default admin user.
